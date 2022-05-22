@@ -1,16 +1,16 @@
 object WallService {
     private var posts = emptyArray<Post>()
 
-    fun add(post: Post) : Post {
-        posts += post
+    fun add(post: Post): Post {
+        posts += if (posts.isEmpty()) post.copy(id = 1U)
+        else post.copy(id = posts.last().id + 1U)
         return posts.last()
     }
 
     fun update(post: Post): Boolean {
-        for(search in posts) {
-            if(search.id == post.id) {
-                val index = posts.indexOf(search)
-                posts[index] = post.copy(ownerId = search.ownerId, date = search.date)
+        for ((index, oldPost) in posts.withIndex()) {
+            if (oldPost.id == post.id) {
+                posts[index] = post.copy(ownerId = oldPost.ownerId, date = oldPost.date)
                 return true
             }
         }
