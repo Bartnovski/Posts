@@ -27,25 +27,25 @@ class WallServiceTest {
         val service = WallService
         service.add(
             Post(
-                10645U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
+                1U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
                 1U, false, false, false, false, false, false, donut1, 1U
             )
         )
         service.add(
             Post(
-                9578U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
+                2U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
                 1U, false, false, false, false, false, false, donut1, 1U
             )
         )
         service.add(
             Post(
-                4875U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
+                3U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
                 1U, false, false, false, false, false, false, donut1, 1U
             )
         )
 
         val update = Post(
-            4875U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
+            3U, 1U, 1U, 1U, 1U, "", 1U, 1U, true, comment1, copyright1, likes1, reports, view1,
             1U, false, false, false, false, false, false, donut1, 1U
         )
 
