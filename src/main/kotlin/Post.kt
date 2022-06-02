@@ -8,11 +8,11 @@ data class Post (
     val replyOwnerId: UInt,
     val replyPostId: UInt,
     val friendsOnly: Boolean,
-    val comments: Comments,
-    val copyright: Copyright,
+    val comments: Comments?,
+    val copyright: Copyright?,
     val likes: Likes,
-    val reposts: Reposts,
-    val views: Views,
+    val reposts: Reposts?,
+    val views: Views?,
     val signerId: UInt,
     val canPin: Boolean,
     val canDelete: Boolean,
@@ -20,8 +20,8 @@ data class Post (
     val isPinned: Boolean,
     val markedAsAds: Boolean,
     val isFavorite: Boolean,
-    val donut: Donut,
-    val postponedId: UInt
+    val donut: Donut?,
+    val postponedId: UInt,
     ) {
 
     var postType = "post"
@@ -29,4 +29,5 @@ data class Post (
         "copy","reply","postpone","suggest" -> field = value
         else -> field = "post"
     }
+    val attachments = emptyArray<Attachments>()
 }
